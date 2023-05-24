@@ -3,12 +3,9 @@ import allContacts from "../contacts.json"
 
 function Contacts() {
 
-  const [ contacts, setContacts ] = useState([allContacts[112], allContacts [64], allContacts[162]])
-
 
   const addContact = () => {
    
-  
       const indexRandom = Math.floor(Math.random() * allContacts.length)
       const randomContatc = allContacts[indexRandom]
       console.log(randomContact)
@@ -40,9 +37,7 @@ function Contacts() {
   
   const deleteContact = (index) => {
   console.log("intentando borrar wizard", index)
-  // yo puedo borrar el elemento por ID o por indice
-  // y para extraer tengo splice, filter, slice
-  
+
   const cloneContacts = JSON.parse(JSON.stringify(contacts))
   cloneContacts.splice (index, 1)
   
